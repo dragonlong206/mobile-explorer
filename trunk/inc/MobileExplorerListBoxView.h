@@ -68,7 +68,21 @@ protected:
 	// ]]] end generated region [Overridden Methods]
 	
 	
-	// [[[ begin [User Handlers]
+	// [[[ begin [User Handlers]	
+	TBool HandleSelectMenuItemSelectedL( TInt aCommand );
+	TBool HandleCopyMenuItemSelectedL( TInt aCommand );
+	TBool HandleCutMenuItemSelectedL( TInt aCommand );
+	TBool HandlePasteMenuItemSelectedL( TInt aCommand );
+	TBool HandleDeleteMenuItemSelectedL( TInt aCommand );
+	TBool HandleBackMenuItemSelectedL( TInt aCommand );
+	TBool HandleForwardMenuItemSelectedL( TInt aCommand );
+	TBool HandleGo_to_RootMenuItemSelectedL( TInt aCommand );
+	TBool HandleOptionsMenuItemSelectedL( TInt aCommand );
+	void HandleMobileExplorerListBoxViewActivatedL();
+	// ]]] end [User Handlers]
+	
+	// ]]] end [Protected Section]
+	
 	TBool isRootDirectory;
 	CEikTextListBox* mainListBox;
 	CTextListBoxModel* lbModel;
@@ -84,22 +98,7 @@ protected:
 	void OpenFile(const TDesC& filePath);
 	void AddToBackQueue(const TDesC& aPath);
 	void AddToForwardQueue(const TDesC& aPath);
-	
-	TBool HandleSelectMenuItemSelectedL( TInt aCommand );
-	TBool HandleCopyMenuItemSelectedL( TInt aCommand );
-	TBool HandleCutMenuItemSelectedL( TInt aCommand );
-	TBool HandlePasteMenuItemSelectedL( TInt aCommand );
-	TBool HandleDeleteMenuItemSelectedL( TInt aCommand );
-	TBool HandleBackMenuItemSelectedL( TInt aCommand );
-	TBool HandleForwardMenuItemSelectedL( TInt aCommand );
-	TBool HandleGo_to_RootMenuItemSelectedL( TInt aCommand );
-	TBool HandleOptionsMenuItemSelectedL( TInt aCommand );
-	void HandleMobileExplorerListBoxViewActivatedL();
-	// ]]] end [User Handlers]
-	
-	// ]]] end [Protected Section]
-	
-	
+		
 	// [[[ begin [Private Section]
 private:
 	void SetupStatusPaneL();

@@ -697,8 +697,15 @@ void CMobileExplorerListBoxView::OpenFile(const TDesC& filePath)
 	RFs fsSession;
 	User::LeaveIfError(fsSession.Connect());		
 	CleanupClosePushL(fsSession);
+	RFile file;
+	User::LeaveIfError(file.Open(fsSession, filePath, EFileRead | EFileShareReadersOnly));
+	CleanupClosePushL(&file);
+	TFileText fileText;
+	fileText.Set(file);
+	//fileText.Read()
 	//iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainerViewId));
 	
+	CleanupStack::PopAndDestroy(&file);
 	CleanupStack::PopAndDestroy(&fsSession);
 	}
 
