@@ -1,0 +1,14 @@
+/*
+========================================================================
+ Name        : MobileExplorer.l01
+ Author      : Le Van Long
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_MobileExplorerApplication_2 ""
+#define STR_MobileExplorerApplication_3 ""
+#define STR_MobileExplorerApplication_4 "MobileExplorer"
+#define STR_MobileExplorerApplication_5 "MobileExplorer"
+#define STR_MobileExplorerApplication_1 ""

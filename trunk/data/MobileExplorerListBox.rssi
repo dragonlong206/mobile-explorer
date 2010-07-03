@@ -1,0 +1,109 @@
+/*
+========================================================================
+ Name        : MobileExplorerListBox.rssi
+ Author      : Le Van Long
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#include "MobileExplorerListBox.hrh"
+#include "MobileExplorerListBox.loc"
+
+RESOURCE AVKON_VIEW r_mobile_explorer_list_box_mobile_explorer_list_box_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	menubar = r_mobile_explorer_list_box_options_menu;
+	toolbar = 0;
+	}
+RESOURCE MENU_BAR r_mobile_explorer_list_box_options_menu
+	{titles =
+			{
+			MENU_TITLE
+				{
+				menu_pane = r_mobile_explorer_list_box_menu_pane1_menu_pane;
+				}
+			};
+
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_mobile_explorer_list_box_status_pane
+	{
+	panes =
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_mobile_explorer_list_box_title_resource;
+			}
+		};
+	}
+RESOURCE TITLE_PANE r_mobile_explorer_list_box_title_resource
+	{
+	txt = STR_MobileExplorerListBoxView_4;
+	}
+RESOURCE LISTBOX r_mobile_explorer_list_box_list_box
+	{
+	flags = EAknListBoxSelectionList;
+	}
+RESOURCE MENU_PANE r_mobile_explorer_list_box_menu_pane1_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewSelectMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_6;
+			},
+		MENU_ITEM
+			{
+			cascade = r_mobile_explorer_list_box_menu_pane2;
+			txt = STR_MobileExplorerListBoxView_12;
+			},
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewBackMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_8;
+			},
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewForwardMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_9;
+			},
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewGo_to_RootMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_10;
+			},
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewOptionsMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_11;
+			}
+		};
+	}
+RESOURCE MENU_PANE r_mobile_explorer_list_box_menu_pane2
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewCopyMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_13;
+			},
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewCutMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_14;
+			},
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewPasteMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_15;
+			},
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewDeleteMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_16;
+			}
+		};
+	}

@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : MobileExplorer.hrh
+ Author      : Le Van Long
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TMobileExplorerViewUids
+	{
+	EMobileExplorerListBoxViewId = 1
+	};

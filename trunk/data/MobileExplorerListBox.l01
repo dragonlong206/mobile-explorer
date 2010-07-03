@@ -1,0 +1,23 @@
+/*
+========================================================================
+ Name        : MobileExplorerListBox.l01
+ Author      : Le Van Long
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_MobileExplorerListBoxView_2 ""
+#define STR_MobileExplorerListBoxView_3 ""
+#define STR_MobileExplorerListBoxView_4 "MobileExplorer"
+#define STR_MobileExplorerListBoxView_1 ""
+#define STR_MobileExplorerListBoxView_10 "Go to Root"
+#define STR_MobileExplorerListBoxView_11 "Options"
+#define STR_MobileExplorerListBoxView_12 "Edit"
+#define STR_MobileExplorerListBoxView_13 "Copy"
+#define STR_MobileExplorerListBoxView_14 "Cut"
+#define STR_MobileExplorerListBoxView_15 "Paste"
+#define STR_MobileExplorerListBoxView_16 "Delete"
+#define STR_MobileExplorerListBoxView_6 "Select"
+#define STR_MobileExplorerListBoxView_8 "Back"
+#define STR_MobileExplorerListBoxView_9 "Forward"

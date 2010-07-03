@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designerData version="1.1.0">
+  <componentManifest>
+    <manifestEntry id="com.nokia.sdt.series60.CAknView" version="1.2.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.DesignTimeContainer" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CommonBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitle" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitleBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBA" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBABase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CCoeControl" version="1.2.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ContainerBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CAknListBox" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CCoeControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBar" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuItem" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuItemBase" version="1.0.0"/>
+  </componentManifest>
+  <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
+  <property id="com.nokia.sdt.component.symbian.version">3.2.0</property>
+  <property id="com.nokia.sdt.component.symbian.vendor">com.nokia.series60</property>
+  <property id="com.nokia.sdt.symbian.dm.COMPONENT_PROVIDER">com.nokia.sdt.component.symbian.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.INCLUDE_DIRECTORY_ID">inc</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCE_DIRECTORY_ID">src</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCEGEN_PROVIDER">com.nokia.sdt.sourcegen.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.BUILD_DIRECTORY_ID">group</property>
+  <component id="com.nokia.sdt.series60.CAknView">
+    <property id="className">CMobileExplorerListBoxView</property>
+    <compoundProperty id="location">
+      <property id="x">51</property>
+      <property id="y">44</property>
+    </compoundProperty>
+    <property id="optionsMenu" type="componentRef">optionsMenu</property>
+    <property id="name">MobileExplorerListBoxView</property>
+    <compoundProperty id="size">
+      <property id="width">240</property>
+      <property id="height">320</property>
+    </compoundProperty>
+    <component id="com.nokia.sdt.series60.StatusPane">
+      <compoundProperty id="location">
+        <property id="x">20</property>
+      </compoundProperty>
+      <property id="name">statusPane</property>
+      <compoundProperty id="size">
+        <property id="width">204</property>
+        <property id="height">63</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.StatusPaneTitle">
+        <compoundProperty id="location">
+          <property id="x">56</property>
+        </compoundProperty>
+        <property id="name">title</property>
+        <property id="titleText" type="i18n">STR_MobileExplorerListBoxView_4</property>
+        <compoundProperty id="size">
+          <property id="width">148</property>
+          <property id="height">43</property>
+        </compoundProperty>
+        <compoundProperty id="image"/>
+      </component>
+    </component>
+    <component id="com.nokia.sdt.series60.CBA">
+      <compoundProperty id="location">
+        <property id="y">288</property>
+      </compoundProperty>
+      <compoundProperty id="info">
+        <property id="leftText" type="i18n">STR_MobileExplorerListBoxView_1</property>
+        <property id="rightText" type="i18n">STR_MobileExplorerListBoxView_2</property>
+        <property id="middleText" type="i18n">STR_MobileExplorerListBoxView_3</property>
+      </compoundProperty>
+      <property id="name">controlPane</property>
+      <compoundProperty id="size">
+        <property id="width">240</property>
+        <property id="height">32</property>
+      </compoundProperty>
+    </component>
+    <component id="com.nokia.sdt.series60.CCoeControl">
+      <property id="initialFocus" type="componentRef">listBox</property>
+      <compoundProperty id="location">
+        <property id="y">66</property>
+      </compoundProperty>
+      <property id="className">CMobileExplorerListBox</property>
+      <property id="name">MobileExplorerListBox</property>
+      <compoundProperty id="size">
+        <property id="width">240</property>
+        <property id="height">222</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.CAknListBox">
+        <property id="style">CAknSingleGraphicStyleListBox</property>
+        <sequenceProperty id="alignmentInfo">
+          <element>Default</element>
+          <element>Default</element>
+        </sequenceProperty>
+        <compoundProperty id="size">
+          <property id="width">240</property>
+          <property id="height">222</property>
+        </compoundProperty>
+        <compoundProperty id="location"/>
+        <compoundProperty id="markIcon"/>
+        <sequenceProperty id="extraImages">
+          <compoundElement>
+            <property id="bmpfile">\resource\apps\MobileExplorer.mbm</property>
+            <property id="bmpid">EMbmMobileexplorerDrive</property>
+            <property id="bmpmask"></property>
+          </compoundElement>
+          <compoundElement>
+            <property id="bmpfile">\resource\apps\MobileExplorer.mbm</property>
+            <property id="bmpid">EMbmMobileexplorerFolder_small</property>
+            <property id="bmpmask"></property>
+          </compoundElement>
+          <compoundElement>
+            <property id="bmpfile">\resource\apps\MobileExplorer.mbm</property>
+            <property id="bmpid">EMbmMobileexplorerFile</property>
+            <property id="bmpmask"></property>
+          </compoundElement>
+        </sequenceProperty>
+        <property id="name">listBox</property>
+      </component>
+    </component>
+    <component id="com.nokia.sdt.series60.MenuBar">
+      <compoundProperty id="location">
+        <property id="x">6</property>
+        <property id="y">101</property>
+      </compoundProperty>
+      <property id="name">optionsMenu</property>
+      <compoundProperty id="size">
+        <property id="height">187</property>
+        <property id="width">228</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.MenuPane">
+        <compoundProperty id="location"/>
+        <property id="name">menuPane1</property>
+        <compoundProperty id="size">
+          <property id="height">187</property>
+          <property id="width">228</property>
+        </compoundProperty>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">2</property>
+          </compoundProperty>
+          <property id="name">selectMenuItem</property>
+          <property id="text" type="i18n">STR_MobileExplorerListBoxView_6</property>
+          <compoundProperty id="size">
+            <property id="width">213</property>
+            <property id="height">28</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleSelectMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleSelectMenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">32</property>
+          </compoundProperty>
+          <property id="name">editMenuItem</property>
+          <property id="text" type="i18n">STR_MobileExplorerListBoxView_12</property>
+          <compoundProperty id="size">
+            <property id="width">213</property>
+            <property id="height">28</property>
+          </compoundProperty>
+          <component id="com.nokia.sdt.series60.MenuPane">
+            <compoundProperty id="location">
+              <property id="x">213</property>
+            </compoundProperty>
+            <property id="name">menuPane2</property>
+            <compoundProperty id="size"/>
+            <component id="com.nokia.sdt.series60.MenuItem">
+              <compoundProperty id="location">
+                <property id="x">5</property>
+                <property id="y">2</property>
+              </compoundProperty>
+              <property id="name">copyMenuItem</property>
+              <property id="text" type="i18n">STR_MobileExplorerListBoxView_13</property>
+              <compoundProperty id="size"/>
+              <eventBinding id="selected" handlerDisplay="HandleCopyMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleCopyMenuItemSelectedL(TInt))"/>
+            </component>
+            <component id="com.nokia.sdt.series60.MenuItem">
+              <compoundProperty id="location">
+                <property id="x">5</property>
+                <property id="y">4</property>
+              </compoundProperty>
+              <property id="name">cutMenuItem</property>
+              <property id="text" type="i18n">STR_MobileExplorerListBoxView_14</property>
+              <compoundProperty id="size"/>
+              <eventBinding id="selected" handlerDisplay="HandleCutMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleCutMenuItemSelectedL(TInt))"/>
+            </component>
+            <component id="com.nokia.sdt.series60.MenuItem">
+              <compoundProperty id="location">
+                <property id="x">5</property>
+                <property id="y">6</property>
+              </compoundProperty>
+              <property id="name">pasteMenuItem</property>
+              <property id="text" type="i18n">STR_MobileExplorerListBoxView_15</property>
+              <compoundProperty id="size"/>
+              <eventBinding id="selected" handlerDisplay="HandlePasteMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandlePasteMenuItemSelectedL(TInt))"/>
+            </component>
+            <component id="com.nokia.sdt.series60.MenuItem">
+              <compoundProperty id="location">
+                <property id="x">5</property>
+                <property id="y">8</property>
+              </compoundProperty>
+              <property id="name">deleteMenuItem</property>
+              <property id="text" type="i18n">STR_MobileExplorerListBoxView_16</property>
+              <compoundProperty id="size"/>
+              <eventBinding id="selected" handlerDisplay="HandleDeleteMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleDeleteMenuItemSelectedL(TInt))"/>
+            </component>
+          </component>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">62</property>
+          </compoundProperty>
+          <property id="name">backMenuItem</property>
+          <property id="text" type="i18n">STR_MobileExplorerListBoxView_8</property>
+          <compoundProperty id="size">
+            <property id="width">213</property>
+            <property id="height">28</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleBackMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleBackMenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">92</property>
+          </compoundProperty>
+          <property id="name">forwardMenuItem</property>
+          <property id="text" type="i18n">STR_MobileExplorerListBoxView_9</property>
+          <compoundProperty id="size">
+            <property id="width">213</property>
+            <property id="height">28</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleForwardMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleForwardMenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">122</property>
+          </compoundProperty>
+          <property id="name">go_to_RootMenuItem</property>
+          <property id="text" type="i18n">STR_MobileExplorerListBoxView_10</property>
+          <compoundProperty id="size">
+            <property id="width">213</property>
+            <property id="height">28</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleGo_to_RootMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleGo_to_RootMenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">152</property>
+          </compoundProperty>
+          <property id="name">optionsMenuItem</property>
+          <property id="text" type="i18n">STR_MobileExplorerListBoxView_11</property>
+          <compoundProperty id="size">
+            <property id="width">213</property>
+            <property id="height">28</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleOptionsMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleOptionsMenuItemSelectedL(TInt))"/>
+        </component>
+      </component>
+    </component>
+    <eventBinding id="activated" handlerDisplay="HandleMobileExplorerListBoxViewActivatedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleMobileExplorerListBoxViewActivatedL())"/>
+  </component>
+  <stringBundle>
+    <stringTable language="LANG_English">
+      <string id="STR_MobileExplorerListBoxView_1"/>
+      <string id="STR_MobileExplorerListBoxView_2"/>
+      <string id="STR_MobileExplorerListBoxView_3"/>
+      <string id="STR_MobileExplorerListBoxView_4">MobileExplorer</string>
+      <string id="STR_MobileExplorerListBoxView_6">Select</string>
+      <string id="STR_MobileExplorerListBoxView_8">Back</string>
+      <string id="STR_MobileExplorerListBoxView_9">Forward</string>
+      <string id="STR_MobileExplorerListBoxView_10">Go to Root</string>
+      <string id="STR_MobileExplorerListBoxView_11">Options</string>
+      <string id="STR_MobileExplorerListBoxView_12">Edit</string>
+      <string id="STR_MobileExplorerListBoxView_13">Copy</string>
+      <string id="STR_MobileExplorerListBoxView_14">Cut</string>
+      <string id="STR_MobileExplorerListBoxView_15">Paste</string>
+      <string id="STR_MobileExplorerListBoxView_16">Delete</string>
+    </stringTable>
+  </stringBundle>
+  <macroTable/>
+  <sourceMappingState>
+    <resourceMappings>
+      <resourceMapping instanceName="optionsMenu">r_mobile_explorer_list_box_options_menu</resourceMapping>
+      <resourceMapping instanceName="title">r_mobile_explorer_list_box_title_resource</resourceMapping>
+      <resourceMapping instanceName="menuPane1">r_mobile_explorer_list_box_menu_pane1_menu_pane</resourceMapping>
+      <resourceMapping instanceName="menuPane2">r_mobile_explorer_list_box_menu_pane2</resourceMapping>
+      <resourceMapping instanceName="listBox">r_mobile_explorer_list_box_list_box</resourceMapping>
+      <resourceMapping instanceName="statusPane">r_mobile_explorer_list_box_status_pane</resourceMapping>
+      <resourceMapping instanceName="MobileExplorerListBoxView">r_mobile_explorer_list_box_mobile_explorer_list_box_view</resourceMapping>
+    </resourceMappings>
+    <enumMappings>
+      <enumMapping instanceName="go_to_RootMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewGo_to_RootMenuItemCommand</enumMapping>
+      <enumMapping instanceName="listBox" propertyId="type">EAknListBoxSelectionList</enumMapping>
+      <enumMapping instanceName="optionsMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewOptionsMenuItemCommand</enumMapping>
+      <enumMapping instanceName="pasteMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewPasteMenuItemCommand</enumMapping>
+      <enumMapping instanceName="deleteMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewDeleteMenuItemCommand</enumMapping>
+      <enumMapping instanceName="forwardMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewForwardMenuItemCommand</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_STATUS_PANE_ID">EEikStatusPaneUidTitle</enumMapping>
+      <enumMapping instanceName="copyMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewCopyMenuItemCommand</enumMapping>
+      <enumMapping instanceName="MobileExplorerListBoxView" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_VIEW_UID">EMobileExplorerListBoxViewId</enumMapping>
+      <enumMapping instanceName="backMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewBackMenuItemCommand</enumMapping>
+      <enumMapping instanceName="selectMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewSelectMenuItemCommand</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_CONTROL_TYPE">EAknCtTitlePane</enumMapping>
+      <enumMapping instanceName="cutMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewCutMenuItemCommand</enumMapping>
+    </enumMappings>
+    <arrayMappings/>
+  </sourceMappingState>
+  <generatedFiles>
+    <file>src/mobileexplorerlistbox.cpp</file>
+    <file>inc/mobileexplorerlistbox.h</file>
+    <file>inc/mobileexplorerlistboxview.h</file>
+    <file>src/mobileexplorerlistboxview.cpp</file>
+    <file>data/mobileexplorer.rss</file>
+    <file>inc/mobileexplorer.hrh</file>
+    <file>data/mobileexplorerlistbox.rssi</file>
+    <file>data/mobileexplorer.loc</file>
+    <file>data/mobileexplorer.l01</file>
+    <file>data/mobileexplorerlistbox.loc</file>
+    <file>data/mobileexplorerlistbox.l01</file>
+    <file>inc/mobileexplorerlistbox.hrh</file>
+  </generatedFiles>
+</designerData>

@@ -1,0 +1,20 @@
+/*
+========================================================================
+ Name        : MobileExplorerListBox.hrh
+ Author      : Le Van Long
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TMobileExplorerListBoxViewCommands
+	{
+	EMobileExplorerListBoxViewSelectMenuItemCommand = 0x6000,
+	EMobileExplorerListBoxViewCopyMenuItemCommand,
+	EMobileExplorerListBoxViewCutMenuItemCommand,
+	EMobileExplorerListBoxViewPasteMenuItemCommand,
+	EMobileExplorerListBoxViewDeleteMenuItemCommand,
+	EMobileExplorerListBoxViewBackMenuItemCommand,
+	EMobileExplorerListBoxViewForwardMenuItemCommand,
+	EMobileExplorerListBoxViewGo_to_RootMenuItemCommand,
+	EMobileExplorerListBoxViewOptionsMenuItemCommand
+	};

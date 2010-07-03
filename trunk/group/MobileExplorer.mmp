@@ -1,0 +1,45 @@
+
+TARGET			MobileExplorer.exe
+UID			   0x100039CE 0xE86CD648
+VENDORID	  	  0
+TARGETTYPE		exe
+EPOCSTACKSIZE	 0x5000
+
+SYSTEMINCLUDE \epoc32\include \epoc32\include\variant \epoc32\include\ecom
+USERINCLUDE	   ..\inc ..\data
+
+SOURCEPATH		..\data
+START RESOURCE	MobileExplorer.rss
+HEADER
+TARGETPATH resource\apps
+END //RESOURCE
+
+START RESOURCE	MobileExplorer_reg.rss
+TARGETPATH 	  \private\10003a3f\apps
+END //RESOURCE
+
+LIBRARY			euser.lib apparc.lib cone.lib eikcore.lib avkon.lib
+LIBRARY			commonengine.lib efsrv.lib estor.lib eikcoctl.lib eikdlg.lib 
+LIBRARY			eikctl.lib bafl.lib fbscli.lib aknnotify.lib aknicon.lib
+LIBRARY			etext.lib gdi.lib egul.lib insock.lib
+LIBRARY			ecom.lib InetProtUtil.lib http.lib esock.lib
+
+LANG 				01
+
+START BITMAP MobileExplorer.mbm
+	HEADER
+	TARGETPATH \resource\apps
+	SOURCEPATH ..\gfx
+	SOURCE c12,1 list_icon.bmp list_icon_mask.bmp
+	SOURCE c8 folder_small.bmp
+	SOURCE c24 file.bmp
+	SOURCE c8 drive.bmp
+END
+
+SOURCEPATH		..\src
+
+#ifdef ENABLE_ABIV2_MODE
+DEBUGGABLE_UDEBONLY
+#endif
+
+SOURCE MobileExplorerListBox.cpp MobileExplorerListBoxView.cpp MobileExplorerAppUi.cpp MobileExplorerDocument.cpp MobileExplorerApplication.cpp
