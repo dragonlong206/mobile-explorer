@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : MobileExplorer.loc
+ Author      : Le Van Long
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#ifdef LANGUAGE_01
+#include "MobileExplorer.l01"
+#endif
