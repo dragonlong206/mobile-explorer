@@ -32,7 +32,7 @@
 
 // [[[ begin generated region: do not modify [Generated Constants]
 // ]]] end generated region [Generated Constants]
-
+#include "MobileExplorerContainer.h"
 /**
  * First phase of Symbian two-phase construction. Should not contain any
  * code that could leave.
@@ -352,7 +352,7 @@ TBool CMobileExplorerListBoxView::HandleSelectMenuItemSelectedL( TInt aCommand )
 				fileExtension.Copy(parse.Ext());
 				if ((fileExtension.Compare(_L("ini")) == 0) || (fileExtension.Compare(_L("txt")) == 0))
 					{
-					
+					OpenFile(fileSpec);
 					}
 				else
 					{
@@ -695,18 +695,28 @@ void CMobileExplorerListBoxView::AddToForwardQueue(const TDesC& aPath)
 void CMobileExplorerListBoxView::OpenFile(const TDesC& filePath)
 	{	
 	RFs fsSession;
-	User::LeaveIfError(fsSession.Connect());		
-	CleanupClosePushL(fsSession);
+//	User::LeaveIfError(fsSession.Connect());		
+//	CleanupClosePushL(fsSession);
 	RFile file;
-	User::LeaveIfError(file.Open(fsSession, filePath, EFileRead | EFileShareReadersOnly));
-	CleanupClosePushL(&file);
-	TFileText fileText;
-	fileText.Set(file);
-	//fileText.Read()
-	//iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainerViewId));
+//	User::LeaveIfError(file.Open(fsSession, filePath, EFileRead | EFileShareReadersOnly));
+//	CleanupClosePushL(file);
+//	TFileText fileText;
+//	fileText.Set(file);
+//	RBuf bufferToWrite;
+//	bufferToWrite.CleanupClosePushL();
+//	TBuf<256> buf;
+//	TInt err;
+//	do
+//		{
+//		err = fileText.Read(buf);
+//		bufferToWrite.Append(buf);
+//		}
+//	while (err == KErrNone);
+	iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainerViewId));
 	
-	CleanupStack::PopAndDestroy(&file);
-	CleanupStack::PopAndDestroy(&fsSession);
+//	CleanupStack::PopAndDestroy(bufferToWrite);
+//	CleanupStack::PopAndDestroy(&file);
+//	CleanupStack::PopAndDestroy(&fsSession);
 	}
 
 

@@ -15,6 +15,7 @@
 
 // [[[ begin generated region: do not modify [Generated Forward Declarations]
 class CMobileExplorerListBoxView;
+class CMobileExplorerContainerView;
 // ]]] end generated region [Generated Forward Declarations]
 
 /**
@@ -54,6 +55,7 @@ public:
 	// [[[ begin generated region: do not modify [Generated Instance Variables]
 private: 
 	CMobileExplorerListBoxView* iMobileExplorerListBoxView;
+	CMobileExplorerContainerView* iMobileExplorerContainerView;
 	// ]]] end generated region [Generated Instance Variables]
 	
 	
