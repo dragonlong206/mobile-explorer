@@ -69,6 +69,9 @@ protected:
 	
 	
 	// [[[ begin [User Handlers]
+	void HandleMobileExplorerContainerViewDeactivated();
+	TBool HandleControlPaneRightSoftKeyPressedL( TInt aCommand );
+	void HandleMobileExplorerContainerViewActivatedL();
 	// ]]] end [User Handlers]
 	
 	// ]]] end [Protected Section]

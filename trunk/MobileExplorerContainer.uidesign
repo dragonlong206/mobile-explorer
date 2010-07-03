@@ -19,6 +19,7 @@
     <manifestEntry id="com.nokia.sdt.series60.EditorBase" version="1.0.0"/>
     <manifestEntry id="com.nokia.sdt.series60.MenuBar" version="1.0.0"/>
     <manifestEntry id="com.nokia.sdt.series60.MenuBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuPane" version="1.0.0"/>
   </componentManifest>
   <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
   <property id="com.nokia.sdt.component.symbian.version">3.2.0</property>
@@ -76,6 +77,7 @@
         <property id="width">240</property>
         <property id="height">32</property>
       </compoundProperty>
+      <eventBinding id="rightSoftKeyPressed" handlerDisplay="HandleControlPaneRightSoftKeyPressedL" handlerSymbol="cpp@src//MobileExplorerContainerView.cpp/function(CMobileExplorerContainerView::HandleControlPaneRightSoftKeyPressedL(TInt))"/>
     </component>
     <component id="com.nokia.sdt.series60.CCoeControl">
       <property id="initialFocus" type="componentRef">txtEditor</property>
@@ -84,12 +86,14 @@
       </compoundProperty>
       <property id="className">CMobileExplorerContainer</property>
       <property id="name">MobileExplorerContainer</property>
+      <property id="exitsApp">false</property>
       <compoundProperty id="size">
         <property id="width">240</property>
         <property id="height">222</property>
       </compoundProperty>
       <component id="com.nokia.sdt.series60.CEikLabel">
         <compoundProperty id="location">
+          <property id="y">2</property>
           <property id="x">-2</property>
         </compoundProperty>
         <property id="name">lblPath</property>
@@ -126,11 +130,21 @@
     <component id="com.nokia.sdt.series60.MenuBar">
       <compoundProperty id="location">
         <property id="x">120</property>
-        <property id="y">288</property>
+        <property id="y">281</property>
       </compoundProperty>
       <property id="name">optionsMenu</property>
-      <compoundProperty id="size"/>
+      <compoundProperty id="size">
+        <property id="height">7</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.MenuPane">
+        <compoundProperty id="location"/>
+        <property id="name">menuPane1</property>
+        <compoundProperty id="size">
+          <property id="height">7</property>
+        </compoundProperty>
+      </component>
     </component>
+    <eventBinding id="activated" handlerDisplay="HandleMobileExplorerContainerViewActivatedL" handlerSymbol="cpp@src//MobileExplorerContainerView.cpp/function(CMobileExplorerContainerView::HandleMobileExplorerContainerViewActivatedL())"/>
   </component>
   <stringBundle>
     <stringTable language="LANG_English">
@@ -148,6 +162,7 @@
       <resourceMapping instanceName="lblPath">r_mobile_explorer_container_lbl_path</resourceMapping>
       <resourceMapping instanceName="statusPane">r_mobile_explorer_container_status_pane</resourceMapping>
       <resourceMapping instanceName="title">r_mobile_explorer_container_title_resource</resourceMapping>
+      <resourceMapping instanceName="menuPane1">r_mobile_explorer_container_menu_pane1_menu_pane</resourceMapping>
       <resourceMapping instanceName="txtEditor" rsrcId="text">r_mobile_explorer_container_txt_editor_2</resourceMapping>
       <resourceMapping instanceName="MobileExplorerContainerView">r_mobile_explorer_container_mobile_explorer_container_view</resourceMapping>
       <resourceMapping instanceName="txtEditor">r_mobile_explorer_container_txt_editor</resourceMapping>
@@ -171,10 +186,10 @@
     <file>src/mobileexplorercontainer.cpp</file>
     <file>inc/mobileexplorercontainerview.h</file>
     <file>data/mobileexplorer.rss</file>
+    <file>data/mobileexplorercontainer.rssi</file>
     <file>inc/mobileexplorer.hrh</file>
     <file>data/mobileexplorerlistbox.rssi</file>
     <file>inc/mobileexplorerlistbox.hrh</file>
-    <file>data/mobileexplorercontainer.rssi</file>
     <file>data/mobileexplorer.loc</file>
     <file>data/mobileexplorer.l01</file>
     <file>data/mobileexplorerlistbox.loc</file>

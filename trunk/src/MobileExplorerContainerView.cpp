@@ -32,7 +32,7 @@
 
 // [[[ begin generated region: do not modify [Generated Constants]
 // ]]] end generated region [Generated Constants]
-
+#include "MobileExplorerAppUi.h"
 /**
  * First phase of Symbian two-phase construction. Should not contain any
  * code that could leave.
@@ -119,6 +119,10 @@ void CMobileExplorerContainerView::HandleCommandL( TInt aCommand )
 	TBool commandHandled = EFalse;
 	switch ( aCommand )
 		{	// code to dispatch to the AknView's menu and CBA commands is generated here
+	
+		case EAknSoftkeyExit:
+			commandHandled = HandleControlPaneRightSoftKeyPressedL( aCommand );
+			break;
 		default:
 			break;
 		}
@@ -126,11 +130,6 @@ void CMobileExplorerContainerView::HandleCommandL( TInt aCommand )
 		
 	if ( !commandHandled ) 
 		{
-	
-		if ( aCommand == EAknSoftkeyExit )
-			{
-			AppUi()->HandleCommandL( EEikCmdExit );
-			}
 	
 		}
 	// ]]] end generated region [Generated Code]
@@ -158,6 +157,7 @@ void CMobileExplorerContainerView::DoActivateL(
 		iMobileExplorerContainer->SetMopParent( this );
 		AppUi()->AddToStackL( *this, iMobileExplorerContainer );
 		} 
+	HandleMobileExplorerContainerViewActivatedL();
 	// ]]] end generated region [Generated Contents]
 	
 	}
@@ -248,5 +248,28 @@ void CMobileExplorerContainerView::CleanupStatusPane()
 CMobileExplorerContainer* CMobileExplorerContainerView::CreateContainerL()
 	{
 	return CMobileExplorerContainer::NewL( ClientRect(), NULL, this );
+	}
+
+
+/** 
+ * Handle the rightSoftKeyPressed event.
+ * @return ETrue if the command was handled, EFalse if not
+ */
+TBool CMobileExplorerContainerView::HandleControlPaneRightSoftKeyPressedL( TInt aCommand )
+	{
+	// TODO: implement rightSoftKeyPressed event handler
+	iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerListBoxViewId));
+	return ETrue;
+	}
+				
+/**
+ *	Handle the activated event
+ */
+void CMobileExplorerContainerView::HandleMobileExplorerContainerViewActivatedL()
+	{
+	// TODO: implement activated event handler		
+	CMobileExplorerAppUi* appUi = (CMobileExplorerAppUi*)(CCoeEnv::Static()->AppUi());
+	iMobileExplorerContainer->SetText(appUi->iFileText);
+	iMobileExplorerContainer->SetLabel(appUi->iLabelText);
 	}
 

@@ -317,12 +317,15 @@
     <file>inc/mobileexplorerlistboxview.h</file>
     <file>src/mobileexplorerlistboxview.cpp</file>
     <file>data/mobileexplorer.rss</file>
-    <file>data/mobileexplorerlistbox.rssi</file>
+    <file>data/mobileexplorercontainer.rssi</file>
     <file>inc/mobileexplorer.hrh</file>
+    <file>data/mobileexplorerlistbox.rssi</file>
     <file>inc/mobileexplorerlistbox.hrh</file>
     <file>data/mobileexplorer.loc</file>
     <file>data/mobileexplorer.l01</file>
     <file>data/mobileexplorerlistbox.loc</file>
     <file>data/mobileexplorerlistbox.l01</file>
+    <file>data/mobileexplorercontainer.loc</file>
+    <file>data/mobileexplorercontainer.l01</file>
   </generatedFiles>
 </designerData>

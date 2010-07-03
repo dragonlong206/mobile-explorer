@@ -180,7 +180,7 @@ void CMobileExplorerContainer::SizeChanged()
  */
 void CMobileExplorerContainer::LayoutControls()
 	{
-	iLblPath->SetExtent( TPoint( -2, 0 ), TSize( 241, 27 ) );
+	iLblPath->SetExtent( TPoint( -2, 2 ), TSize( 241, 27 ) );
 	iTxtEditor->SetExtent( TPoint( -1, 32 ), TSize( 241, 190 ) );
 	}
 // ]]] end generated function
@@ -263,3 +263,12 @@ void CMobileExplorerContainer::Draw( const TRect& aRect ) const
 	
 	}
 				
+void CMobileExplorerContainer::SetText(const TDesC& text)
+	{
+	iTxtEditor->SetTextL(&text);
+	}
+
+void CMobileExplorerContainer::SetLabel(const TDesC& label)
+	{
+	iLblPath->SetTextL(label);
+	}
