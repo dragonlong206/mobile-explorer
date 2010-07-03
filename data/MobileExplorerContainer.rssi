@@ -15,7 +15,14 @@ RESOURCE AVKON_VIEW r_mobile_explorer_container_mobile_explorer_container_view
 	toolbar = 0;
 	}
 RESOURCE MENU_BAR r_mobile_explorer_container_options_menu
-	{
+	{titles =
+			{
+			MENU_TITLE
+				{
+				menu_pane = r_mobile_explorer_container_menu_pane1_menu_pane;
+				}
+			};
+
 	}
 RESOURCE STATUS_PANE_APP_MODEL r_mobile_explorer_container_status_pane
 	{
@@ -50,4 +57,7 @@ RESOURCE EDWIN r_mobile_explorer_container_txt_editor
 RESOURCE TBUF r_mobile_explorer_container_txt_editor_2
 	{
 	buf = STR_MobileExplorerContainerView_7;
+	}
+RESOURCE MENU_PANE r_mobile_explorer_container_menu_pane1_menu_pane
+	{
 	}

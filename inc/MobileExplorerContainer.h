@@ -106,6 +106,9 @@ public:
 		
 		ELastControl
 		};
+public:
+	void SetText(const TDesC& text);
+	void SetLabel(const TDesC& label);
 	};
 				
 #endif // MOBILEEXPLORERCONTAINER_H

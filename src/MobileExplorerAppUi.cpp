@@ -42,7 +42,8 @@ CMobileExplorerAppUi::~CMobileExplorerAppUi()
 	{
 	// [[[ begin generated region: do not modify [Generated Contents]
 	// ]]] end generated region [Generated Contents]
-	
+	iFileText.Close();
+	iLabelText.Close();
 	}
 
 // [[[ begin generated function: do not modify

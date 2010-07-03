@@ -79,6 +79,7 @@ protected:
 	TBool HandleGo_to_RootMenuItemSelectedL( TInt aCommand );
 	TBool HandleOptionsMenuItemSelectedL( TInt aCommand );
 	void HandleMobileExplorerListBoxViewActivatedL();
+	TBool HandleControlPaneMiddleSoftKeyPressedL( TInt aCommand );
 	// ]]] end [User Handlers]
 	
 	// ]]] end [Protected Section]
@@ -95,9 +96,10 @@ protected:
 	//void FormatDriveInfo(TDes& listItemText, const TDriveInfo aDriveInfo);
 	void FormatVolumeInfo(TDes& listItemText, const TVolumeInfo aVolumeInfo);
 	void ShowFileList(const TDesC& fileSpec);
-	void OpenFile(const TDesC& filePath);
+	void DisplayFile(const TDesC& filePath);
 	void AddToBackQueue(const TDesC& aPath);
 	void AddToForwardQueue(const TDesC& aPath);
+	//TFileName GetFileExtension(const TFileName& aFileName);
 		
 	// [[[ begin [Private Section]
 private:

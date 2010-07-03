@@ -62,7 +62,9 @@ private:
 	// [[[ begin [User Handlers]
 protected: 
 	// ]]] end [User Handlers]
-	
+public:
+	RBuf iFileText;
+	RBuf iLabelText;
 	};
 
 #endif // MOBILEEXPLORERAPPUI_H			

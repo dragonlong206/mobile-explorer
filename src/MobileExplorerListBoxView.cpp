@@ -30,6 +30,8 @@
 #include "MobileExplorerListBox.h"
 // ]]] end generated region [Generated User Includes]
 
+#include "MobileExplorerAppUi.h"
+#include <utf.h>
 // [[[ begin generated region: do not modify [Generated Constants]
 // ]]] end generated region [Generated Constants]
 #include "MobileExplorerContainer.h"
@@ -347,12 +349,12 @@ TBool CMobileExplorerListBoxView::HandleSelectMenuItemSelectedL( TInt aCommand )
 			else
 				{
 				TParse parse;
-				User::LeaveIfError(fsSession.Parse(fileSpec, parse));
+				User::LeaveIfError(parse.Set(fileSpec, NULL, NULL));
 				TFileName fileExtension;
 				fileExtension.Copy(parse.Ext());
-				if ((fileExtension.Compare(_L("ini")) == 0) || (fileExtension.Compare(_L("txt")) == 0))
+				if ((fileExtension.Compare(_L(".ini")) == 0) || (fileExtension.Compare(_L(".txt")) == 0))
 					{
-					OpenFile(fileSpec);
+					DisplayFile(fileSpec);
 					}
 				else
 					{
@@ -517,10 +519,17 @@ TBool CMobileExplorerListBoxView::HandleOptionsMenuItemSelectedL( TInt aCommand 
  */
 void CMobileExplorerListBoxView::HandleMobileExplorerListBoxViewActivatedL()
 	{
-	// TODO: implement activated event handler		
-	mainListBox = iMobileExplorerListBox->ListBox();
-	lbModel = mainListBox->Model();
-	DisplayDrives();
+	// TODO: implement activated event handler
+	if (currentPath.Compare(_L("")) == 0) // When program is loaded the first time
+		{
+		mainListBox = iMobileExplorerListBox->ListBox();
+		lbModel = mainListBox->Model();
+		DisplayDrives();
+		}
+	else // When close another view and activate this view
+		{
+		ShowFileList(currentPath);
+		}
 	}
 
 void CMobileExplorerListBoxView::DisplayDrives()
@@ -692,31 +701,43 @@ void CMobileExplorerListBoxView::AddToForwardQueue(const TDesC& aPath)
 		}	
 	}
 
-void CMobileExplorerListBoxView::OpenFile(const TDesC& filePath)
+void CMobileExplorerListBoxView::DisplayFile(const TDesC& filePath)
 	{	
 	RFs fsSession;
-//	User::LeaveIfError(fsSession.Connect());		
-//	CleanupClosePushL(fsSession);
+	User::LeaveIfError(fsSession.Connect());		
+	CleanupClosePushL(fsSession);
 	RFile file;
-//	User::LeaveIfError(file.Open(fsSession, filePath, EFileRead | EFileShareReadersOnly));
-//	CleanupClosePushL(file);
-//	TFileText fileText;
-//	fileText.Set(file);
-//	RBuf bufferToWrite;
-//	bufferToWrite.CleanupClosePushL();
-//	TBuf<256> buf;
-//	TInt err;
-//	do
-//		{
-//		err = fileText.Read(buf);
-//		bufferToWrite.Append(buf);
-//		}
-//	while (err == KErrNone);
-	iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainerViewId));
-	
-//	CleanupStack::PopAndDestroy(bufferToWrite);
-//	CleanupStack::PopAndDestroy(&file);
-//	CleanupStack::PopAndDestroy(&fsSession);
+	User::LeaveIfError(file.Open(fsSession, filePath, EFileRead | EFileShareReadersOnly));
+	CleanupClosePushL(file);
+	TInt fileSize;
+	file.Size(fileSize);
+	if (fileSize > 1048576)	// size > 1MB
+		{
+		CAknInformationNote* note = new CAknInformationNote();
+		note->ExecuteLD(_L("File too big!"));
+		}
+	else
+		{
+//		TFileText fileText;
+//		fileText.Set(file);
+//		
+		CMobileExplorerAppUi* appUi = (CMobileExplorerAppUi*)(CCoeEnv::Static()->AppUi());
+		RBuf8 content;
+		content.CleanupClosePushL();
+		content.Create(fileSize);
+		file.Read(content);
+		appUi->iFileText.ReAlloc(content.Length());
+		appUi->iFileText.Copy(content);
+
+		TBuf<50> buf;
+		file.Name(buf);
+		appUi->iLabelText.ReAlloc(buf.Length());
+		appUi->iLabelText.Copy(buf);		
+		iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainerViewId));
+		CleanupStack::PopAndDestroy(&content);
+		}
+	CleanupStack::PopAndDestroy(&file);
+	CleanupStack::PopAndDestroy(&fsSession);
 	}
 
-
+				
