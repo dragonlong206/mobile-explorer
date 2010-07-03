@@ -127,8 +127,8 @@ public:
 	enum TListBoxImages
 		{
 		// [[[ begin generated region: do not modify [Generated Enums]
-		EListBoxMobileexplorerDriveIndex = 0,
-		EListBoxMobileexplorerFolder_smallIndex = 1,
+		EListBoxMobileexplorerDrive_iconIndex = 0,
+		EListBoxMobileexplorerFolder_iconIndex = 1,
 		EListBoxMobileexplorerFileIndex = 2,
 		EListBoxFirstUserImageIndex
 		

@@ -31,9 +31,7 @@ START BITMAP MobileExplorer.mbm
 	TARGETPATH \resource\apps
 	SOURCEPATH ..\gfx
 	SOURCE c12,1 list_icon.bmp list_icon_mask.bmp
-	SOURCE c8 folder_small.bmp
-	SOURCE c24 file.bmp
-	SOURCE c8 drive.bmp
+	SOURCE c24 file.bmp drive_icon.bmp folder_icon.bmp
 END
 
 SOURCEPATH		..\src

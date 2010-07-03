@@ -431,16 +431,16 @@ void CMobileExplorerListBox::SetupListBoxIconsL()
 	icons = new (ELeave) CAknIconArray( 3 );
 	CleanupStack::PushL( icons );
 	CGulIcon* icon;
-	// for EListBoxMobileexplorerDriveIndex
+	// for EListBoxMobileexplorerDrive_iconIndex
 	icon = LoadAndScaleIconL(
-			KMobileExplorerFile, EMbmMobileexplorerDrive, -1,
+			KMobileExplorerFile, EMbmMobileexplorerDrive_icon, -1,
 			NULL, EAspectRatioPreserved );
 	CleanupStack::PushL( icon );
 	icons->AppendL( icon );
 	CleanupStack::Pop( icon );
-	// for EListBoxMobileexplorerFolder_smallIndex
+	// for EListBoxMobileexplorerFolder_iconIndex
 	icon = LoadAndScaleIconL(
-			KMobileExplorerFile, EMbmMobileexplorerFolder_small, -1,
+			KMobileExplorerFile, EMbmMobileexplorerFolder_icon, -1,
 			NULL, EAspectRatioPreserved );
 	CleanupStack::PushL( icon );
 	icons->AppendL( icon );

@@ -694,8 +694,12 @@ void CMobileExplorerListBoxView::AddToForwardQueue(const TDesC& aPath)
 
 void CMobileExplorerListBoxView::OpenFile(const TDesC& filePath)
 	{	
+	RFs fsSession;
+	User::LeaveIfError(fsSession.Connect());		
+	CleanupClosePushL(fsSession);
+	//iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainerViewId));
 	
-	//iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainerViewId));	
+	CleanupStack::PopAndDestroy(&fsSession);
 	}
 
 
