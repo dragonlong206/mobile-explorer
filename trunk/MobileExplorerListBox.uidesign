@@ -103,12 +103,12 @@
         <sequenceProperty id="extraImages">
           <compoundElement>
             <property id="bmpfile">\resource\apps\MobileExplorer.mbm</property>
-            <property id="bmpid">EMbmMobileexplorerDrive</property>
+            <property id="bmpid">EMbmMobileexplorerDrive_icon</property>
             <property id="bmpmask"></property>
           </compoundElement>
           <compoundElement>
             <property id="bmpfile">\resource\apps\MobileExplorer.mbm</property>
-            <property id="bmpid">EMbmMobileexplorerFolder_small</property>
+            <property id="bmpid">EMbmMobileexplorerFolder_icon</property>
             <property id="bmpmask"></property>
           </compoundElement>
           <compoundElement>
@@ -317,12 +317,12 @@
     <file>inc/mobileexplorerlistboxview.h</file>
     <file>src/mobileexplorerlistboxview.cpp</file>
     <file>data/mobileexplorer.rss</file>
-    <file>inc/mobileexplorer.hrh</file>
     <file>data/mobileexplorerlistbox.rssi</file>
+    <file>inc/mobileexplorer.hrh</file>
+    <file>inc/mobileexplorerlistbox.hrh</file>
     <file>data/mobileexplorer.loc</file>
     <file>data/mobileexplorer.l01</file>
     <file>data/mobileexplorerlistbox.loc</file>
     <file>data/mobileexplorerlistbox.l01</file>
-    <file>inc/mobileexplorerlistbox.hrh</file>
   </generatedFiles>
 </designerData>
