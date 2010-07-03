@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designerData version="1.1.0">
+  <componentManifest>
+    <manifestEntry id="com.nokia.sdt.series60.CAknView" version="1.2.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.DesignTimeContainer" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CommonBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitle" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitleBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBA" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBABase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CCoeControl" version="1.2.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ContainerBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikLabel" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CCoeControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikEdwin" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikEdwinBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.EditorBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBar" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBase" version="1.0.0"/>
+  </componentManifest>
+  <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
+  <property id="com.nokia.sdt.component.symbian.version">3.2.0</property>
+  <property id="com.nokia.sdt.component.symbian.vendor">com.nokia.series60</property>
+  <property id="com.nokia.sdt.symbian.dm.COMPONENT_PROVIDER">com.nokia.sdt.component.symbian.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.INCLUDE_DIRECTORY_ID">inc</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCE_DIRECTORY_ID">src</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCEGEN_PROVIDER">com.nokia.sdt.sourcegen.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.BUILD_DIRECTORY_ID">group</property>
+  <component id="com.nokia.sdt.series60.CAknView">
+    <property id="className">CMobileExplorerContainerView</property>
+    <compoundProperty id="location">
+      <property id="x">51</property>
+      <property id="y">44</property>
+    </compoundProperty>
+    <property id="optionsMenu" type="componentRef">optionsMenu</property>
+    <property id="name">MobileExplorerContainerView</property>
+    <compoundProperty id="size">
+      <property id="width">240</property>
+      <property id="height">320</property>
+    </compoundProperty>
+    <component id="com.nokia.sdt.series60.StatusPane">
+      <compoundProperty id="location">
+        <property id="x">20</property>
+      </compoundProperty>
+      <property id="name">statusPane</property>
+      <compoundProperty id="size">
+        <property id="width">204</property>
+        <property id="height">63</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.StatusPaneTitle">
+        <compoundProperty id="location">
+          <property id="x">56</property>
+        </compoundProperty>
+        <property id="name">title</property>
+        <property id="titleText" type="i18n">STR_MobileExplorerContainerView_4</property>
+        <compoundProperty id="size">
+          <property id="width">148</property>
+          <property id="height">43</property>
+        </compoundProperty>
+        <compoundProperty id="image"/>
+      </component>
+    </component>
+    <component id="com.nokia.sdt.series60.CBA">
+      <compoundProperty id="location">
+        <property id="y">288</property>
+      </compoundProperty>
+      <compoundProperty id="info">
+        <property id="leftText" type="i18n">STR_MobileExplorerContainerView_1</property>
+        <property id="rightText" type="i18n">STR_MobileExplorerContainerView_2</property>
+        <property id="middleText" type="i18n">STR_MobileExplorerContainerView_3</property>
+      </compoundProperty>
+      <property id="name">controlPane</property>
+      <compoundProperty id="size">
+        <property id="width">240</property>
+        <property id="height">32</property>
+      </compoundProperty>
+    </component>
+    <component id="com.nokia.sdt.series60.CCoeControl">
+      <property id="initialFocus" type="componentRef">txtEditor</property>
+      <compoundProperty id="location">
+        <property id="y">66</property>
+      </compoundProperty>
+      <property id="className">CMobileExplorerContainer</property>
+      <property id="name">MobileExplorerContainer</property>
+      <compoundProperty id="size">
+        <property id="width">240</property>
+        <property id="height">222</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.CEikLabel">
+        <compoundProperty id="location">
+          <property id="x">-2</property>
+        </compoundProperty>
+        <property id="name">lblPath</property>
+        <property id="text" type="i18n">STR_MobileExplorerContainerView_6</property>
+        <compoundProperty id="size">
+          <property id="width">241</property>
+          <property id="height">27</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikEdwin">
+        <compoundProperty id="size">
+          <property id="width">241</property>
+          <property id="height">190</property>
+        </compoundProperty>
+        <compoundProperty id="avkonFlags"/>
+        <compoundProperty id="location">
+          <property id="x">-1</property>
+          <property id="y">32</property>
+        </compoundProperty>
+        <compoundProperty id="flags"/>
+        <compoundProperty id="allowedCaseModes"/>
+        <property id="name">txtEditor</property>
+        <property id="text" type="i18n">STR_MobileExplorerContainerView_7</property>
+        <compoundProperty id="allowedInputModes">
+          <property id="EAknEditorKatakanaInputMode">true</property>
+          <property id="EAknEditorFullWidthTextInputMode">true</property>
+          <property id="EAknEditorFullWidthNumericInputMode">true</property>
+          <property id="EAknEditorFullWidthKatakanaInputMode">true</property>
+          <property id="EAknEditorHiraganaKanjiInputMode">true</property>
+          <property id="EAknEditorHalfWidthTextInputMode">true</property>
+        </compoundProperty>
+      </component>
+    </component>
+    <component id="com.nokia.sdt.series60.MenuBar">
+      <compoundProperty id="location">
+        <property id="x">120</property>
+        <property id="y">288</property>
+      </compoundProperty>
+      <property id="name">optionsMenu</property>
+      <compoundProperty id="size"/>
+    </component>
+  </component>
+  <stringBundle>
+    <stringTable language="LANG_English">
+      <string id="STR_MobileExplorerContainerView_1"/>
+      <string id="STR_MobileExplorerContainerView_2"/>
+      <string id="STR_MobileExplorerContainerView_3"/>
+      <string id="STR_MobileExplorerContainerView_4">MobileExplorer</string>
+      <string id="STR_MobileExplorerContainerView_6"/>
+      <string id="STR_MobileExplorerContainerView_7"/>
+    </stringTable>
+  </stringBundle>
+  <macroTable/>
+  <sourceMappingState>
+    <resourceMappings>
+      <resourceMapping instanceName="lblPath">r_mobile_explorer_container_lbl_path</resourceMapping>
+      <resourceMapping instanceName="statusPane">r_mobile_explorer_container_status_pane</resourceMapping>
+      <resourceMapping instanceName="title">r_mobile_explorer_container_title_resource</resourceMapping>
+      <resourceMapping instanceName="txtEditor" rsrcId="text">r_mobile_explorer_container_txt_editor_2</resourceMapping>
+      <resourceMapping instanceName="MobileExplorerContainerView">r_mobile_explorer_container_mobile_explorer_container_view</resourceMapping>
+      <resourceMapping instanceName="txtEditor">r_mobile_explorer_container_txt_editor</resourceMapping>
+      <resourceMapping instanceName="optionsMenu">r_mobile_explorer_container_options_menu</resourceMapping>
+    </resourceMappings>
+    <enumMappings>
+      <enumMapping instanceName="txtEditor" propertyId="numericKeymap">EAknEditorStandardNumberModeKeymap</enumMapping>
+      <enumMapping instanceName="txtEditor" propertyId="defaultCase">EAknEditorTextCase</enumMapping>
+      <enumMapping instanceName="lblPath" propertyId="font">EEikLabelFontNormal</enumMapping>
+      <enumMapping instanceName="MobileExplorerContainerView" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_VIEW_UID">EMobileExplorerContainerViewId</enumMapping>
+      <enumMapping instanceName="txtEditor" propertyId="defaultInputMode">EAknEditorTextInputMode</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_STATUS_PANE_ID">EEikStatusPaneUidTitle</enumMapping>
+      <enumMapping instanceName="lblPath" propertyId="alignment">EEikLabelAlignHCenter</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_CONTROL_TYPE">EAknCtTitlePane</enumMapping>
+    </enumMappings>
+    <arrayMappings/>
+  </sourceMappingState>
+  <generatedFiles>
+    <file>src/mobileexplorercontainerview.cpp</file>
+    <file>inc/mobileexplorercontainer.h</file>
+    <file>src/mobileexplorercontainer.cpp</file>
+    <file>inc/mobileexplorercontainerview.h</file>
+    <file>data/mobileexplorer.rss</file>
+    <file>inc/mobileexplorer.hrh</file>
+    <file>data/mobileexplorerlistbox.rssi</file>
+    <file>inc/mobileexplorerlistbox.hrh</file>
+    <file>data/mobileexplorercontainer.rssi</file>
+    <file>data/mobileexplorer.loc</file>
+    <file>data/mobileexplorer.l01</file>
+    <file>data/mobileexplorerlistbox.loc</file>
+    <file>data/mobileexplorerlistbox.l01</file>
+    <file>data/mobileexplorercontainer.loc</file>
+    <file>data/mobileexplorercontainer.l01</file>
+  </generatedFiles>
+</designerData>

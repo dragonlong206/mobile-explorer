@@ -16,7 +16,9 @@
 // [[[ begin generated region: do not modify [Generated User Includes]
 #include "MobileExplorerAppUi.h"
 #include "MobileExplorer.hrh"
+#include "MobileExplorerListBox.hrh"
 #include "MobileExplorerListBoxView.h"
+#include "MobileExplorerContainerView.h"
 // ]]] end generated region [Generated User Includes]
 
 // [[[ begin generated region: do not modify [Generated Constants]
@@ -49,6 +51,8 @@ void CMobileExplorerAppUi::InitializeContainersL()
 	iMobileExplorerListBoxView = CMobileExplorerListBoxView::NewL();
 	AddViewL( iMobileExplorerListBoxView );
 	SetDefaultViewL( *iMobileExplorerListBoxView );
+	iMobileExplorerContainerView = CMobileExplorerContainerView::NewL();
+	AddViewL( iMobileExplorerContainerView );
 	}
 // ]]] end generated function
 

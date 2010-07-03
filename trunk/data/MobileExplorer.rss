@@ -43,4 +43,9 @@ RESOURCE TBUF r_application_akn_view_reference1
 	{
 	}
 
+RESOURCE TBUF r_application_akn_view_reference2
+	{
+	}
+
 #include "MobileExplorerListBox.rssi"
+#include "MobileExplorerContainer.rssi"

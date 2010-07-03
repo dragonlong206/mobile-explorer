@@ -1,13 +1,11 @@
 /*
 ========================================================================
- Name        : MobileExplorer.hrh
+ Name        : MobileExplorerContainer.loc
  Author      : Le Van Long
  Copyright   : Your copyright notice
  Description : 
 ========================================================================
 */
-enum TMobileExplorerViewUids
-	{
-	EMobileExplorerListBoxViewId = 1,
-	EMobileExplorerContainerViewId
-	};
+#ifdef LANGUAGE_01
+#include "MobileExplorerContainer.l01"
+#endif

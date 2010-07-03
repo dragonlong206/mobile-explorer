@@ -18,9 +18,9 @@
     <manifestEntry id="com.nokia.sdt.series60.AvkonViewReference" version="1.0.0"/>
     <manifestEntry id="com.nokia.sdt.series60.DesignReference" version="1.0.0"/>
   </componentManifest>
+  <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
   <property id="com.nokia.sdt.component.symbian.version">3.2.0</property>
   <property id="com.nokia.sdt.component.symbian.vendor">com.nokia.series60</property>
-  <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
   <property id="com.nokia.sdt.symbian.dm.COMPONENT_PROVIDER">com.nokia.sdt.component.symbian.Symbian-Provider</property>
   <property id="com.nokia.sdt.symbian.dm.INCLUDE_DIRECTORY_ID">inc</property>
   <property id="com.nokia.sdt.symbian.dm.ROOT_CONTAINER">MobileExplorerAppUi</property>
@@ -91,6 +91,11 @@
           <property id="baseName">MobileExplorerListBox</property>
           <property id="name">aknViewReference1</property>
         </component>
+        <component id="com.nokia.sdt.series60.AvkonViewReference">
+          <property id="filePath">MobileExplorerContainer.uidesign</property>
+          <property id="baseName">MobileExplorerContainer</property>
+          <property id="name">aknViewReference2</property>
+        </component>
       </component>
     </component>
   </component>
@@ -109,14 +114,17 @@
       <resourceMapping instanceName="statusPane">r_application_status_pane</resourceMapping>
       <resourceMapping instanceName="MobileExplorerAppUi">r_application_mobile_explorer_app_ui</resourceMapping>
       <resourceMapping instanceName="aknViewReference1" rsrcId="tabText">r_application_akn_view_reference1</resourceMapping>
+      <resourceMapping instanceName="aknViewReference2" rsrcId="tabText">r_application_akn_view_reference2</resourceMapping>
       <resourceMapping instanceName="MobileExplorerAppUi" rsrcId="localisable_app_info">r_localisable_app_info</resourceMapping>
     </resourceMappings>
     <enumMappings>
       <enumMapping instanceName="aknViewReference1" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_VIEW_UID">EMobileExplorerListBoxViewId</enumMapping>
+      <enumMapping instanceName="aknViewReference2" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_VIEW_UID">EMobileExplorerContainerViewId</enumMapping>
     </enumMappings>
     <arrayMappings/>
   </sourceMappingState>
   <generatedFiles>
+    <file>src/mobileexplorercontainerview.cpp</file>
     <file>inc/mobileexplorerlistboxview.h</file>
     <file>inc/mobileexplorerapplication.h</file>
     <file>src/mobileexplorerappui.cpp</file>
@@ -125,12 +133,17 @@
     <file>inc/mobileexplorerappui.h</file>
     <file>inc/mobileexplorerdocument.h</file>
     <file>src/mobileexplorerapplication.cpp</file>
+    <file>inc/mobileexplorercontainerview.h</file>
     <file>data/mobileexplorer.rss</file>
-    <file>data/mobileexplorerlistbox.rssi</file>
-    <file>data/mobileexplorerlistbox.l01</file>
-    <file>data/mobileexplorerlistbox.loc</file>
-    <file>data/mobileexplorer.l01</file>
-    <file>data/mobileexplorer.loc</file>
     <file>inc/mobileexplorer.hrh</file>
+    <file>data/mobileexplorerlistbox.rssi</file>
+    <file>inc/mobileexplorerlistbox.hrh</file>
+    <file>data/mobileexplorer.loc</file>
+    <file>data/mobileexplorer.l01</file>
+    <file>data/mobileexplorerlistbox.loc</file>
+    <file>data/mobileexplorerlistbox.l01</file>
+    <file>data/mobileexplorercontainer.rssi</file>
+    <file>data/mobileexplorercontainer.l01</file>
+    <file>data/mobileexplorercontainer.loc</file>
   </generatedFiles>
 </designerData>
