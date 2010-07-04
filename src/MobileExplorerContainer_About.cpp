@@ -1,6 +1,6 @@
 /*
 ========================================================================
- Name        : MobileExplorerContainer.cpp
+ Name        : MobileExplorerContainer_About.cpp
  Author      : Le Van Long
  Copyright   : Your copyright notice
  Description : 
@@ -19,8 +19,8 @@
 // ]]] end generated region [Generated System Includes]
 
 // [[[ begin generated region: do not modify [Generated User Includes]
-#include "MobileExplorerContainer.h"
-#include "MobileExplorerContainerView.h"
+#include "MobileExplorerContainer_About.h"
+#include "MobileExplorerContainer_AboutView.h"
 #include "MobileExplorer.hrh"
 #include "MobileExplorerListBox.hrh"
 // ]]] end generated region [Generated User Includes]
@@ -32,24 +32,24 @@
  * First phase of Symbian two-phase construction. Should not 
  * contain any code that could leave.
  */
-CMobileExplorerContainer::CMobileExplorerContainer()
+CMobileExplorerContainer_About::CMobileExplorerContainer_About()
 	{
 	// [[[ begin generated region: do not modify [Generated Contents]
-	iLblPath = NULL;
-	iTxtEditor = NULL;
+	iLblTitle = NULL;
+	iTxtContent = NULL;
 	// ]]] end generated region [Generated Contents]
 	
 	}
 /** 
  * Destroy child controls.
  */
-CMobileExplorerContainer::~CMobileExplorerContainer()
+CMobileExplorerContainer_About::~CMobileExplorerContainer_About()
 	{
 	// [[[ begin generated region: do not modify [Generated Contents]
-	delete iLblPath;
-	iLblPath = NULL;
-	delete iTxtEditor;
-	iTxtEditor = NULL;
+	delete iLblTitle;
+	iLblTitle = NULL;
+	delete iTxtContent;
+	iTxtContent = NULL;
 	// ]]] end generated region [Generated Contents]
 	
 	}
@@ -61,14 +61,14 @@ CMobileExplorerContainer::~CMobileExplorerContainer()
  * @param aRect bounding rectangle
  * @param aParent owning parent, or NULL
  * @param aCommandObserver command observer
- * @return initialized instance of CMobileExplorerContainer
+ * @return initialized instance of CMobileExplorerContainer_About
  */
-CMobileExplorerContainer* CMobileExplorerContainer::NewL( 
+CMobileExplorerContainer_About* CMobileExplorerContainer_About::NewL( 
 		const TRect& aRect, 
 		const CCoeControl* aParent, 
 		MEikCommandObserver* aCommandObserver )
 	{
-	CMobileExplorerContainer* self = CMobileExplorerContainer::NewLC( 
+	CMobileExplorerContainer_About* self = CMobileExplorerContainer_About::NewLC( 
 			aRect, 
 			aParent, 
 			aCommandObserver );
@@ -83,14 +83,14 @@ CMobileExplorerContainer* CMobileExplorerContainer::NewL(
  * @param aRect The rectangle for this window
  * @param aParent owning parent, or NULL
  * @param aCommandObserver command observer
- * @return new instance of CMobileExplorerContainer
+ * @return new instance of CMobileExplorerContainer_About
  */
-CMobileExplorerContainer* CMobileExplorerContainer::NewLC( 
+CMobileExplorerContainer_About* CMobileExplorerContainer_About::NewLC( 
 		const TRect& aRect, 
 		const CCoeControl* aParent, 
 		MEikCommandObserver* aCommandObserver )
 	{
-	CMobileExplorerContainer* self = new ( ELeave ) CMobileExplorerContainer();
+	CMobileExplorerContainer_About* self = new ( ELeave ) CMobileExplorerContainer_About();
 	CleanupStack::PushL( self );
 	self->ConstructL( aRect, aParent, aCommandObserver );
 	return self;
@@ -103,7 +103,7 @@ CMobileExplorerContainer* CMobileExplorerContainer::NewLC(
  * @param aCommandObserver command observer
  * @param aParent owning parent, or NULL
  */ 
-void CMobileExplorerContainer::ConstructL( 
+void CMobileExplorerContainer_About::ConstructL( 
 		const TRect& aRect, 
 		const CCoeControl* aParent, 
 		MEikCommandObserver* aCommandObserver )
@@ -130,7 +130,7 @@ void CMobileExplorerContainer::ConstructL(
 * Return the number of controls in the container (override)
 * @return count
 */
-TInt CMobileExplorerContainer::CountComponentControls() const
+TInt CMobileExplorerContainer_About::CountComponentControls() const
 	{
 	return ( int ) ELastControl;
 	}
@@ -140,15 +140,15 @@ TInt CMobileExplorerContainer::CountComponentControls() const
 * @param aIndex Control index [0...n) (limited by #CountComponentControls)
 * @return Pointer to control
 */
-CCoeControl* CMobileExplorerContainer::ComponentControl( TInt aIndex ) const
+CCoeControl* CMobileExplorerContainer_About::ComponentControl( TInt aIndex ) const
 	{
 	// [[[ begin generated region: do not modify [Generated Contents]
 	switch ( aIndex )
 		{
-		case ELblPath:
-			return iLblPath;
-		case ETxtEditor:
-			return iTxtEditor;
+		case ELblTitle:
+			return iLblTitle;
+		case ETxtContent:
+			return iTxtContent;
 		}
 	// ]]] end generated region [Generated Contents]
 	
@@ -164,7 +164,7 @@ CCoeControl* CMobileExplorerContainer::ComponentControl( TInt aIndex ) const
  *  This code will need to be modified to adjust arbitrary controls to
  *  any screen size.
  */				
-void CMobileExplorerContainer::SizeChanged()
+void CMobileExplorerContainer_About::SizeChanged()
 	{
 	CCoeControl::SizeChanged();
 	LayoutControls();
@@ -178,17 +178,17 @@ void CMobileExplorerContainer::SizeChanged()
 /**
  * Layout components as specified in the UI Designer
  */
-void CMobileExplorerContainer::LayoutControls()
+void CMobileExplorerContainer_About::LayoutControls()
 	{
-	iLblPath->SetExtent( TPoint( -2, 2 ), TSize( 241, 27 ) );
-	iTxtEditor->SetExtent( TPoint( -1, 32 ), TSize( 241, 190 ) );
+	iLblTitle->SetExtent( TPoint( -2, 3 ), TSize( 242, 27 ) );
+	iTxtContent->SetExtent( TPoint( 1, 32 ), TSize( 239, 199 ) );
 	}
 // ]]] end generated function
 
 /**
  *	Handle key events.
  */				
-TKeyResponse CMobileExplorerContainer::OfferKeyEventL( 
+TKeyResponse CMobileExplorerContainer_About::OfferKeyEventL( 
 		const TKeyEvent& aKeyEvent, 
 		TEventCode aType )
 	{
@@ -208,27 +208,27 @@ TKeyResponse CMobileExplorerContainer::OfferKeyEventL(
 /**
  *	Initialize each control upon creation.
  */				
-void CMobileExplorerContainer::InitializeControlsL()
+void CMobileExplorerContainer_About::InitializeControlsL()
 	{
-	iLblPath = new ( ELeave ) CEikLabel;
-	iLblPath->SetContainerWindowL( *this );
+	iLblTitle = new ( ELeave ) CEikLabel;
+	iLblTitle->SetContainerWindowL( *this );
 		{
 		TResourceReader reader;
-		iEikonEnv->CreateResourceReaderLC( reader, R_MOBILE_EXPLORER_CONTAINER_LBL_PATH );
-		iLblPath->ConstructFromResourceL( reader );
+		iEikonEnv->CreateResourceReaderLC( reader, R_MOBILE_EXPLORER_CONTAINER_ABOUT_LBL_TITLE );
+		iLblTitle->ConstructFromResourceL( reader );
 		CleanupStack::PopAndDestroy(); // reader internal state
 		}
-	iTxtEditor = new ( ELeave ) CEikEdwin;
-	iTxtEditor->SetContainerWindowL( *this );
+	iTxtContent = new ( ELeave ) CEikEdwin;
+	iTxtContent->SetContainerWindowL( *this );
 		{
 		TResourceReader reader;
-		iEikonEnv->CreateResourceReaderLC( reader, R_MOBILE_EXPLORER_CONTAINER_TXT_EDITOR );
-		iTxtEditor->ConstructFromResourceL( reader );
+		iEikonEnv->CreateResourceReaderLC( reader, R_MOBILE_EXPLORER_CONTAINER_ABOUT_TXT_CONTENT );
+		iTxtContent->ConstructFromResourceL( reader );
 		CleanupStack::PopAndDestroy(); // reader internal state
 		}
 		{
-		HBufC* text = StringLoader::LoadLC( R_MOBILE_EXPLORER_CONTAINER_TXT_EDITOR_2 );
-		iTxtEditor->SetTextL( text );
+		HBufC* text = StringLoader::LoadLC( R_MOBILE_EXPLORER_CONTAINER_ABOUT_TXT_CONTENT_2 );
+		iTxtContent->SetTextL( text );
 		CleanupStack::PopAndDestroy( text );
 		}
 	
@@ -238,10 +238,10 @@ void CMobileExplorerContainer::InitializeControlsL()
 /** 
  * Handle global resource changes, such as scalable UI or skin events (override)
  */
-void CMobileExplorerContainer::HandleResourceChange( TInt aType )
+void CMobileExplorerContainer_About::HandleResourceChange( TInt aType )
 	{
 	CCoeControl::HandleResourceChange( aType );
-	SetRect( iAvkonViewAppUi->View( TUid::Uid( EMobileExplorerContainerViewId ) )->ClientRect() );
+	SetRect( iAvkonViewAppUi->View( TUid::Uid( EMobileExplorerContainer_AboutViewId ) )->ClientRect() );
 	// [[[ begin generated region: do not modify [Generated Contents]
 	// ]]] end generated region [Generated Contents]
 	
@@ -250,7 +250,7 @@ void CMobileExplorerContainer::HandleResourceChange( TInt aType )
 /**
  *	Draw container contents.
  */				
-void CMobileExplorerContainer::Draw( const TRect& aRect ) const
+void CMobileExplorerContainer_About::Draw( const TRect& aRect ) const
 	{
 	// [[[ begin generated region: do not modify [Generated Contents]
 	CWindowGc& gc = SystemGc();
@@ -260,12 +260,3 @@ void CMobileExplorerContainer::Draw( const TRect& aRect ) const
 	
 	}
 				
-void CMobileExplorerContainer::SetText(const TDesC& text)
-	{
-	iTxtEditor->SetTextL(&text);
-	}
-
-void CMobileExplorerContainer::SetLabel(const TDesC& label)
-	{
-	iLblPath->SetTextL(label);
-	}

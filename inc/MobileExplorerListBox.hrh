@@ -16,5 +16,6 @@ enum TMobileExplorerListBoxViewCommands
 	EMobileExplorerListBoxViewBackMenuItemCommand,
 	EMobileExplorerListBoxViewForwardMenuItemCommand,
 	EMobileExplorerListBoxViewGo_to_RootMenuItemCommand,
-	EMobileExplorerListBoxViewOptionsMenuItemCommand
+	EMobileExplorerListBoxViewOptionsMenuItemCommand,
+	EMobileExplorerListBoxViewAboutMenuItemCommand
 	};

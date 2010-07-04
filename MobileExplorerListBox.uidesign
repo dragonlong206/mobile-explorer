@@ -123,18 +123,18 @@
     <component id="com.nokia.sdt.series60.MenuBar">
       <compoundProperty id="location">
         <property id="x">6</property>
-        <property id="y">101</property>
+        <property id="y">41</property>
       </compoundProperty>
       <property id="name">optionsMenu</property>
       <compoundProperty id="size">
-        <property id="height">187</property>
+        <property id="height">247</property>
         <property id="width">228</property>
       </compoundProperty>
       <component id="com.nokia.sdt.series60.MenuPane">
         <compoundProperty id="location"/>
         <property id="name">menuPane1</property>
         <compoundProperty id="size">
-          <property id="height">187</property>
+          <property id="height">247</property>
           <property id="width">228</property>
         </compoundProperty>
         <component id="com.nokia.sdt.series60.MenuItem">
@@ -261,6 +261,19 @@
           </compoundProperty>
           <eventBinding id="selected" handlerDisplay="HandleOptionsMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleOptionsMenuItemSelectedL(TInt))"/>
         </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">182</property>
+          </compoundProperty>
+          <property id="name">aboutMenuItem</property>
+          <property id="text" type="i18n">STR_MobileExplorerListBoxView_5</property>
+          <compoundProperty id="size">
+            <property id="width">213</property>
+            <property id="height">28</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleAboutMenuItemSelectedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleAboutMenuItemSelectedL(TInt))"/>
+        </component>
       </component>
     </component>
     <eventBinding id="activated" handlerDisplay="HandleMobileExplorerListBoxViewActivatedL" handlerSymbol="cpp@src//MobileExplorerListBoxView.cpp/function(CMobileExplorerListBoxView::HandleMobileExplorerListBoxViewActivatedL())"/>
@@ -281,6 +294,7 @@
       <string id="STR_MobileExplorerListBoxView_14">Cut</string>
       <string id="STR_MobileExplorerListBoxView_15">Paste</string>
       <string id="STR_MobileExplorerListBoxView_16">Delete</string>
+      <string id="STR_MobileExplorerListBoxView_5">About</string>
     </stringTable>
   </stringBundle>
   <macroTable/>
@@ -296,6 +310,7 @@
     </resourceMappings>
     <enumMappings>
       <enumMapping instanceName="go_to_RootMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewGo_to_RootMenuItemCommand</enumMapping>
+      <enumMapping instanceName="aboutMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewAboutMenuItemCommand</enumMapping>
       <enumMapping instanceName="listBox" propertyId="type">EAknListBoxSelectionList</enumMapping>
       <enumMapping instanceName="optionsMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewOptionsMenuItemCommand</enumMapping>
       <enumMapping instanceName="pasteMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EMobileExplorerListBoxViewPasteMenuItemCommand</enumMapping>
@@ -317,15 +332,18 @@
     <file>inc/mobileexplorerlistboxview.h</file>
     <file>src/mobileexplorerlistboxview.cpp</file>
     <file>data/mobileexplorer.rss</file>
-    <file>data/mobileexplorercontainer.rssi</file>
-    <file>inc/mobileexplorer.hrh</file>
     <file>data/mobileexplorerlistbox.rssi</file>
+    <file>inc/mobileexplorer.hrh</file>
     <file>inc/mobileexplorerlistbox.hrh</file>
+    <file>data/mobileexplorercontainer.rssi</file>
+    <file>data/mobileexplorercontainer_about.rssi</file>
     <file>data/mobileexplorer.loc</file>
     <file>data/mobileexplorer.l01</file>
     <file>data/mobileexplorerlistbox.loc</file>
     <file>data/mobileexplorerlistbox.l01</file>
     <file>data/mobileexplorercontainer.loc</file>
     <file>data/mobileexplorercontainer.l01</file>
+    <file>data/mobileexplorercontainer_about.loc</file>
+    <file>data/mobileexplorercontainer_about.l01</file>
   </generatedFiles>
 </designerData>

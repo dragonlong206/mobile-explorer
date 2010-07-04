@@ -44,8 +44,8 @@ CMobileExplorerListBoxView::CMobileExplorerListBoxView()
 	// [[[ begin generated region: do not modify [Generated Contents]
 	iMobileExplorerListBox = NULL;
 	// ]]] end generated region [Generated Contents]
-	isRootDirectory = ETrue;	
-	currentPath.Copy(_L(""));
+	//isRootDirectory = ETrue;	
+	//currentPath.Copy(_L(""));
 	}
 
 /** 
@@ -110,8 +110,7 @@ void CMobileExplorerListBoxView::ConstructL()
 	// ]]] end generated region [Generated Code]
 	
 	// add your own initialization code here
-	backQueue = new(ELeave) CDesCArraySeg(8);
-	forwardQueue = new(ELeave) CDesCArraySeg(8);
+	
 	}
 
 /**
@@ -158,6 +157,9 @@ void CMobileExplorerListBoxView::HandleCommandL( TInt aCommand )
 			break;
 		case EMobileExplorerListBoxViewOptionsMenuItemCommand:
 			commandHandled = HandleOptionsMenuItemSelectedL( aCommand );
+			break;
+		case EMobileExplorerListBoxViewAboutMenuItemCommand:
+			commandHandled = HandleAboutMenuItemSelectedL( aCommand );
 			break;
 		default:
 			break;
@@ -520,14 +522,28 @@ TBool CMobileExplorerListBoxView::HandleOptionsMenuItemSelectedL( TInt aCommand 
 void CMobileExplorerListBoxView::HandleMobileExplorerListBoxViewActivatedL()
 	{
 	// TODO: implement activated event handler
-	if (currentPath.Compare(_L("")) == 0) // When program is loaded the first time
+	// Initialize
+	if (backQueue == NULL)
 		{
-		mainListBox = iMobileExplorerListBox->ListBox();
-		lbModel = mainListBox->Model();
+		backQueue = new(ELeave) CDesCArraySeg(8);
+		}
+	if (forwardQueue == NULL)
+		{
+		forwardQueue = new(ELeave) CDesCArraySeg(8);
+		}
+	mainListBox = iMobileExplorerListBox->ListBox();
+	lbModel = mainListBox->Model();
+	CMobileExplorerAppUi* appUi = (CMobileExplorerAppUi*)(CCoeEnv::Static()->AppUi());	
+	currentPath.Copy(appUi->iCurrentPath);
+
+	if (currentPath.Compare(_L("")) == 0) // When program is loaded the first time
+		{		
+		isRootDirectory = ETrue;
 		DisplayDrives();
 		}
 	else // When close another view and activate this view
 		{
+		isRootDirectory = EFalse;
 		ShowFileList(currentPath);
 		}
 	}
@@ -732,7 +748,9 @@ void CMobileExplorerListBoxView::DisplayFile(const TDesC& filePath)
 		TBuf<50> buf;
 		file.Name(buf);
 		appUi->iLabelText.ReAlloc(buf.Length());
-		appUi->iLabelText.Copy(buf);		
+		appUi->iLabelText.Copy(buf);
+		// Save path to AppUi
+		appUi->iCurrentPath.Copy(currentPath);
 		iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainerViewId));
 		CleanupStack::PopAndDestroy(&content);
 		}
@@ -740,4 +758,18 @@ void CMobileExplorerListBoxView::DisplayFile(const TDesC& filePath)
 	CleanupStack::PopAndDestroy(&fsSession);
 	}
 
+				
+/** 
+ * Handle the selected event.
+ * @param aCommand the command id invoked
+ * @return ETrue if the command was handled, EFalse if not
+ */
+TBool CMobileExplorerListBoxView::HandleAboutMenuItemSelectedL( TInt aCommand )
+	{
+	// TODO: implement selected event handler
+	CMobileExplorerAppUi* appUi = (CMobileExplorerAppUi*)(CCoeEnv::Static()->AppUi());
+	appUi->iCurrentPath.Copy(currentPath);
+	iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerContainer_AboutViewId));
+	return ETrue;
+	}
 				

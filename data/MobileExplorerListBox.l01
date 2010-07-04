@@ -21,3 +21,4 @@
 #define STR_MobileExplorerListBoxView_6 "Select"
 #define STR_MobileExplorerListBoxView_8 "Back"
 #define STR_MobileExplorerListBoxView_9 "Forward"
+#define STR_MobileExplorerListBoxView_5 "About"

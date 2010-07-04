@@ -1,6 +1,6 @@
 /*
 ========================================================================
- Name        : MobileExplorerContainerView.cpp
+ Name        : MobileExplorerContainer_AboutView.cpp
  Author      : Le Van Long
  Copyright   : Your copyright notice
  Description : 
@@ -25,11 +25,11 @@
 // [[[ begin generated region: do not modify [Generated User Includes]
 
 #include "MobileExplorer.hrh"
-#include "MobileExplorerContainerView.h"
+#include "MobileExplorerContainer_AboutView.h"
 #include "MobileExplorerListBox.hrh"
-#include "MobileExplorerContainer.h"
+#include "MobileExplorerContainer_About.h"
 // ]]] end generated region [Generated User Includes]
-#include "MobileExplorerAppUi.h"
+
 // [[[ begin generated region: do not modify [Generated Constants]
 // ]]] end generated region [Generated Constants]
 
@@ -37,10 +37,10 @@
  * First phase of Symbian two-phase construction. Should not contain any
  * code that could leave.
  */
-CMobileExplorerContainerView::CMobileExplorerContainerView()
+CMobileExplorerContainer_AboutView::CMobileExplorerContainer_AboutView()
 	{
 	// [[[ begin generated region: do not modify [Generated Contents]
-	iMobileExplorerContainer = NULL;
+	iMobileExplorerContainer_About = NULL;
 	// ]]] end generated region [Generated Contents]
 	
 	}
@@ -49,11 +49,11 @@ CMobileExplorerContainerView::CMobileExplorerContainerView()
  * The view's destructor removes the container from the control
  * stack and destroys it.
  */
-CMobileExplorerContainerView::~CMobileExplorerContainerView()
+CMobileExplorerContainer_AboutView::~CMobileExplorerContainer_AboutView()
 	{
 	// [[[ begin generated region: do not modify [Generated Contents]
-	delete iMobileExplorerContainer;
-	iMobileExplorerContainer = NULL;
+	delete iMobileExplorerContainer_About;
+	iMobileExplorerContainer_About = NULL;
 	// ]]] end generated region [Generated Contents]
 	
 	}
@@ -62,11 +62,11 @@ CMobileExplorerContainerView::~CMobileExplorerContainerView()
  * Symbian two-phase constructor.
  * This creates an instance then calls the second-phase constructor
  * without leaving the instance on the cleanup stack.
- * @return new instance of CMobileExplorerContainerView
+ * @return new instance of CMobileExplorerContainer_AboutView
  */
-CMobileExplorerContainerView* CMobileExplorerContainerView::NewL()
+CMobileExplorerContainer_AboutView* CMobileExplorerContainer_AboutView::NewL()
 	{
-	CMobileExplorerContainerView* self = CMobileExplorerContainerView::NewLC();
+	CMobileExplorerContainer_AboutView* self = CMobileExplorerContainer_AboutView::NewLC();
 	CleanupStack::Pop( self );
 	return self;
 	}
@@ -75,11 +75,11 @@ CMobileExplorerContainerView* CMobileExplorerContainerView::NewL()
  * Symbian two-phase constructor.
  * This creates an instance, pushes it on the cleanup stack,
  * then calls the second-phase constructor.
- * @return new instance of CMobileExplorerContainerView
+ * @return new instance of CMobileExplorerContainer_AboutView
  */
-CMobileExplorerContainerView* CMobileExplorerContainerView::NewLC()
+CMobileExplorerContainer_AboutView* CMobileExplorerContainer_AboutView::NewLC()
 	{
-	CMobileExplorerContainerView* self = new ( ELeave ) CMobileExplorerContainerView();
+	CMobileExplorerContainer_AboutView* self = new ( ELeave ) CMobileExplorerContainer_AboutView();
 	CleanupStack::PushL( self );
 	self->ConstructL();
 	return self;
@@ -90,10 +90,10 @@ CMobileExplorerContainerView* CMobileExplorerContainerView::NewLC()
  * Second-phase constructor for view.  
  * Initialize contents from resource.
  */ 
-void CMobileExplorerContainerView::ConstructL()
+void CMobileExplorerContainer_AboutView::ConstructL()
 	{
 	// [[[ begin generated region: do not modify [Generated Code]
-	BaseConstructL( R_MOBILE_EXPLORER_CONTAINER_MOBILE_EXPLORER_CONTAINER_VIEW );
+	BaseConstructL( R_MOBILE_EXPLORER_CONTAINER_ABOUT_MOBILE_EXPLORER_CONTAINER_ABOUT_VIEW );
 				
 	// ]]] end generated region [Generated Code]
 	
@@ -104,16 +104,16 @@ void CMobileExplorerContainerView::ConstructL()
 /**
  * @return The UID for this view
  */
-TUid CMobileExplorerContainerView::Id() const
+TUid CMobileExplorerContainer_AboutView::Id() const
 	{
-	return TUid::Uid( EMobileExplorerContainerViewId );
+	return TUid::Uid( EMobileExplorerContainer_AboutViewId );
 	}
 
 /**
  * Handle a command for this view (override)
  * @param aCommand command id to be handled
  */
-void CMobileExplorerContainerView::HandleCommandL( TInt aCommand )
+void CMobileExplorerContainer_AboutView::HandleCommandL( TInt aCommand )
 	{
 	// [[[ begin generated region: do not modify [Generated Code]
 	TBool commandHandled = EFalse;
@@ -140,7 +140,7 @@ void CMobileExplorerContainerView::HandleCommandL( TInt aCommand )
  *	Handles user actions during activation of the view, 
  *	such as initializing the content.
  */
-void CMobileExplorerContainerView::DoActivateL( 
+void CMobileExplorerContainer_AboutView::DoActivateL( 
 		const TVwsViewId& /*aPrevViewId*/,
 		TUid /*aCustomMessageId*/,
 		const TDesC8& /*aCustomMessage*/ )
@@ -151,29 +151,28 @@ void CMobileExplorerContainerView::DoActivateL(
 				
 				
 	
-	if ( iMobileExplorerContainer == NULL )
+	if ( iMobileExplorerContainer_About == NULL )
 		{
-		iMobileExplorerContainer = CreateContainerL();
-		iMobileExplorerContainer->SetMopParent( this );
-		AppUi()->AddToStackL( *this, iMobileExplorerContainer );
+		iMobileExplorerContainer_About = CreateContainerL();
+		iMobileExplorerContainer_About->SetMopParent( this );
+		AppUi()->AddToStackL( *this, iMobileExplorerContainer_About );
 		} 
-	HandleMobileExplorerContainerViewActivatedL();
 	// ]]] end generated region [Generated Contents]
 	
 	}
 
 /**
  */
-void CMobileExplorerContainerView::DoDeactivate()
+void CMobileExplorerContainer_AboutView::DoDeactivate()
 	{
 	// [[[ begin generated region: do not modify [Generated Contents]
 	CleanupStatusPane();
 	
-	if ( iMobileExplorerContainer != NULL )
+	if ( iMobileExplorerContainer_About != NULL )
 		{
-		AppUi()->RemoveFromViewStack( *this, iMobileExplorerContainer );
-		delete iMobileExplorerContainer;
-		iMobileExplorerContainer = NULL;
+		AppUi()->RemoveFromViewStack( *this, iMobileExplorerContainer_About );
+		delete iMobileExplorerContainer_About;
+		iMobileExplorerContainer_About = NULL;
 		}
 	// ]]] end generated region [Generated Contents]
 	
@@ -182,7 +181,7 @@ void CMobileExplorerContainerView::DoDeactivate()
 /** 
  * Handle status pane size change for this view (override)
  */
-void CMobileExplorerContainerView::HandleStatusPaneSizeChange()
+void CMobileExplorerContainer_AboutView::HandleStatusPaneSizeChange()
 	{
 	CAknView::HandleStatusPaneSizeChange();
 	
@@ -201,7 +200,7 @@ void CMobileExplorerContainerView::HandleStatusPaneSizeChange()
 	}
 
 // [[[ begin generated function: do not modify
-void CMobileExplorerContainerView::SetupStatusPaneL()
+void CMobileExplorerContainer_AboutView::SetupStatusPaneL()
 	{
 	// reset the context pane
 	TUid contextPaneUid = TUid::Uid( EEikStatusPaneUidContext );
@@ -223,7 +222,7 @@ void CMobileExplorerContainerView::SetupStatusPaneL()
 		CAknTitlePane* title = static_cast< CAknTitlePane* >( 
 			StatusPane()->ControlL( titlePaneUid ) );
 		TResourceReader reader;
-		iEikonEnv->CreateResourceReaderLC( reader, R_MOBILE_EXPLORER_CONTAINER_TITLE_RESOURCE );
+		iEikonEnv->CreateResourceReaderLC( reader, R_MOBILE_EXPLORER_CONTAINER_ABOUT_TITLE_RESOURCE );
 		title->SetFromResourceL( reader );
 		CleanupStack::PopAndDestroy(); // reader internal state
 		}
@@ -233,7 +232,7 @@ void CMobileExplorerContainerView::SetupStatusPaneL()
 // ]]] end generated function
 
 // [[[ begin generated function: do not modify
-void CMobileExplorerContainerView::CleanupStatusPane()
+void CMobileExplorerContainer_AboutView::CleanupStatusPane()
 	{
 	}
 
@@ -241,35 +240,23 @@ void CMobileExplorerContainerView::CleanupStatusPane()
 
 /**
  *	Creates the top-level container for the view.  You may modify this method's
- *	contents and the CMobileExplorerContainer::NewL() signature as needed to initialize the
+ *	contents and the CMobileExplorerContainer_About::NewL() signature as needed to initialize the
  *	container, but the signature for this method is fixed.
- *	@return new initialized instance of CMobileExplorerContainer
+ *	@return new initialized instance of CMobileExplorerContainer_About
  */
-CMobileExplorerContainer* CMobileExplorerContainerView::CreateContainerL()
+CMobileExplorerContainer_About* CMobileExplorerContainer_AboutView::CreateContainerL()
 	{
-	return CMobileExplorerContainer::NewL( ClientRect(), NULL, this );
+	return CMobileExplorerContainer_About::NewL( ClientRect(), NULL, this );
 	}
-
 
 /** 
  * Handle the rightSoftKeyPressed event.
  * @return ETrue if the command was handled, EFalse if not
  */
-TBool CMobileExplorerContainerView::HandleControlPaneRightSoftKeyPressedL( TInt aCommand )
+TBool CMobileExplorerContainer_AboutView::HandleControlPaneRightSoftKeyPressedL( TInt aCommand )
 	{
 	// TODO: implement rightSoftKeyPressed event handler
 	iAvkonViewAppUi->ActivateLocalViewL(TUid::Uid(EMobileExplorerListBoxViewId));
 	return ETrue;
 	}
 				
-/**
- *	Handle the activated event
- */
-void CMobileExplorerContainerView::HandleMobileExplorerContainerViewActivatedL()
-	{
-	// TODO: implement activated event handler		
-	CMobileExplorerAppUi* appUi = (CMobileExplorerAppUi*)(CCoeEnv::Static()->AppUi());
-	iMobileExplorerContainer->SetText(appUi->iFileText);
-	iMobileExplorerContainer->SetLabel(appUi->iLabelText);
-	}
-

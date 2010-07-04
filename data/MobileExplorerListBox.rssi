@@ -78,6 +78,11 @@ RESOURCE MENU_PANE r_mobile_explorer_list_box_menu_pane1_menu_pane
 			{
 			command = EMobileExplorerListBoxViewOptionsMenuItemCommand;
 			txt = STR_MobileExplorerListBoxView_11;
+			},
+		MENU_ITEM
+			{
+			command = EMobileExplorerListBoxViewAboutMenuItemCommand;
+			txt = STR_MobileExplorerListBoxView_5;
 			}
 		};
 	}
