@@ -1,0 +1,53 @@
+/*
+========================================================================
+ Name        : MobileExplorerContainer_About.rssi
+ Author      : Le Van Long
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#include "MobileExplorerContainer_About.loc"
+
+RESOURCE AVKON_VIEW r_mobile_explorer_container_about_mobile_explorer_container_about_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	menubar = r_mobile_explorer_container_about_options_menu;
+	toolbar = 0;
+	}
+RESOURCE MENU_BAR r_mobile_explorer_container_about_options_menu
+	{
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_mobile_explorer_container_about_status_pane
+	{
+	panes =
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_mobile_explorer_container_about_title_resource;
+			}
+		};
+	}
+RESOURCE TITLE_PANE r_mobile_explorer_container_about_title_resource
+	{
+	txt = STR_MobileExplorerContainer_AboutView_4;
+	}
+RESOURCE LABEL r_mobile_explorer_container_about_lbl_title
+	{
+	txt = STR_MobileExplorerContainer_AboutView_6;
+	horiz_align = EEikLabelAlignHLeft;
+	}
+RESOURCE EDWIN r_mobile_explorer_container_about_txt_content
+	{
+	maxlength = 255;
+	default_case = EAknEditorTextCase;
+	allowed_case_modes = EAknEditorAllCaseModes;
+	numeric_keymap = EAknEditorStandardNumberModeKeymap;
+	default_input_mode = EAknEditorTextInputMode;
+	allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode | EAknEditorSecretAlphaInputMode | EAknEditorKatakanaInputMode | EAknEditorFullWidthTextInputMode | EAknEditorFullWidthNumericInputMode | EAknEditorFullWidthKatakanaInputMode | EAknEditorHiraganaKanjiInputMode | EAknEditorHalfWidthTextInputMode;
+	}
+RESOURCE TBUF r_mobile_explorer_container_about_txt_content_2
+	{
+	buf = STR_MobileExplorerContainer_AboutView_8;
+	}

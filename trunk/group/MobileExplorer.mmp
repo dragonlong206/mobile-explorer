@@ -40,4 +40,4 @@ SOURCEPATH		..\src
 DEBUGGABLE_UDEBONLY
 #endif
 
-SOURCE MobileExplorerListBox.cpp MobileExplorerListBoxView.cpp MobileExplorerAppUi.cpp MobileExplorerDocument.cpp MobileExplorerApplication.cpp MobileExplorerContainerView.cpp MobileExplorerContainer.cpp
+SOURCE MobileExplorerListBox.cpp MobileExplorerListBoxView.cpp MobileExplorerAppUi.cpp MobileExplorerDocument.cpp MobileExplorerApplication.cpp MobileExplorerContainerView.cpp MobileExplorerContainer.cpp MobileExplorerContainer_AboutView.cpp MobileExplorerContainer_About.cpp

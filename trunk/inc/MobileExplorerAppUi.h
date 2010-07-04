@@ -16,6 +16,7 @@
 // [[[ begin generated region: do not modify [Generated Forward Declarations]
 class CMobileExplorerListBoxView;
 class CMobileExplorerContainerView;
+class CMobileExplorerContainer_AboutView;
 // ]]] end generated region [Generated Forward Declarations]
 
 /**
@@ -56,6 +57,7 @@ public:
 private: 
 	CMobileExplorerListBoxView* iMobileExplorerListBoxView;
 	CMobileExplorerContainerView* iMobileExplorerContainerView;
+	CMobileExplorerContainer_AboutView* iMobileExplorerContainer_AboutView;
 	// ]]] end generated region [Generated Instance Variables]
 	
 	
@@ -65,6 +67,7 @@ protected:
 public:
 	RBuf iFileText;
 	RBuf iLabelText;
+	TBuf<256> iCurrentPath;
 	};
 
 #endif // MOBILEEXPLORERAPPUI_H			

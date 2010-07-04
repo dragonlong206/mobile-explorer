@@ -1,0 +1,15 @@
+/*
+========================================================================
+ Name        : MobileExplorerContainer_About.l01
+ Author      : Le Van Long
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_MobileExplorerContainer_AboutView_1 ""
+#define STR_MobileExplorerContainer_AboutView_2 ""
+#define STR_MobileExplorerContainer_AboutView_3 ""
+#define STR_MobileExplorerContainer_AboutView_4 "MobileExplorer"
+#define STR_MobileExplorerContainer_AboutView_6 "About"
+#define STR_MobileExplorerContainer_AboutView_8 "Name: Le Van Long"<0x2029>"StudentID: 0712255"<0x2029>"Email: lv.long.tn@gmail.com"<0x2029>"Phone: 0934724506"
